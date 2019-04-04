@@ -14,7 +14,7 @@ return function(req, res, next) {
     if (req.decodedJwt && req.decodedJwt.roles && req.decodedJwt.roles.includes(role)) {
     next();
     } else {
-    res.status(403).json({ message: 'FOREBIDDEN' });
+    res.status(403).json({ message: 'FORBIDDEN' });
     }
 };
 }

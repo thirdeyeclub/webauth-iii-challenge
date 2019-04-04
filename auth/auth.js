@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const secret = require('../secrets').jwtSecret;
 const u = require('../users/users-model');
 
-router.post('/register', (req, res) => {
+router.post('/api/register', (req, res) => {
 let user = req.body;
   const hash = bcrypt.hashSync(user.password, 10); // 2 ^ n
 user.password = hash;
@@ -15,7 +15,7 @@ u.add(user)
     .catch(error => {res.status(500).json(error);});
 });
 
-router.post('/login', (req, res) => {
+router.post('/api/login', (req, res) => {
 let { username, password } = req.body;
 u.findBy({ username })
     .first()

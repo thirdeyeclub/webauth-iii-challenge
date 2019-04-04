@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "server": "nodemon index.js",
-    "start": "node index.js"
+    "please": "node index.js"
   },
   "keywords": [],
   "dependencies": {
