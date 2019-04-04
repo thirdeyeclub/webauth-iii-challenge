@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-
 const secret = require('../secrets').jwtSecret;
 const u = require('../users/users-model');
 
@@ -12,7 +11,7 @@ user.password = hash;
 
 u.add(user)
     .then(saved => {res.status(201).json(saved);})
-    .catch(error => {res.status(500).json(error);});
+    .catch(error => {console.log(error); res.status(500).json(error);});
 });
 
 router.post('/api/login', (req, res) => {
