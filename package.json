@@ -1,0 +1,29 @@
+{
+  "name": "webauth-iii-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/thirdeyeclub/webauth-iii-challenge.git",
+  "author": "Lambda School",
+  "license": "MIT",
+  "scripts": {
+    "server": "nodemon index.js",
+    "please": "node index.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "helmet": "^3.15.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.16.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sqlite3": "^4.0.6",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
